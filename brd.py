@@ -1,11 +1,11 @@
 import random
 
-def generate_random_digits(length=10):
+def generate_random_digits(length=9):
     return ''.join(str(random.randint(0, 9)) for i in range(length))
 
 def main():
-    # ip = input("Enter IP: ")
-    # port = input("Enter port: ")
+    ip = input("Enter IP: ")
+    port = input("Enter port: ")
     user = input("Enter user: ")
     password = input("Enter password: ")
     count = int(input("How many proxies you want? "))
@@ -16,8 +16,7 @@ def main():
         print("\nGenerated strings:")
         for i in range(count):
             rand_part = generate_random_digits()
-            # result = f"{ip}:{port}:customer-{user}-cc-us-sessid-{rand_part}-sesstime-3:{password}"
-            result = f"pr.oxylabs.io:7777:customer-{user}-cc-us-sessid-{rand_part}-sesstime-3:{password}"
+            result = f"{ip}:{port}:{user}-session-{rand_part}:{password}"
             
             print(result)
             file.write(result + "\n")

@@ -10,7 +10,7 @@ def main():
     password = input("Enter password: ")
     count = int(input("How many proxies you want? "))
 
-    filename = "bright-data-resi-proxy.txt"
+    filename = "./done/oxy.txt"
 
     with open(filename, "w") as file:
         print("\nGenerated strings:")

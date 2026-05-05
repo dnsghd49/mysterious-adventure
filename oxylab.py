@@ -17,7 +17,7 @@ def main():
         for i in range(count):
             rand_part = generate_random_digits()
             # result = f"{ip}:{port}:customer-{user}-cc-us-sessid-{rand_part}-sesstime-3:{password}"
-            result = f"pr.oxylabs.io:7777:customer-{user}-cc-us-sessid-{rand_part}-sesstime-3:{password}"
+            result = f"pr.oxylabs.io:7777:customer-{user}-cc-us-sessid-{rand_part}-sesstime-5:{password}"
             
             print(result)
             file.write(result + "\n")

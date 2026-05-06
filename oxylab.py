@@ -8,6 +8,7 @@ def main():
     # port = input("Enter port: ")
     user = input("Enter user: ")
     password = input("Enter password: ")
+    session = int(input("Enter session time(it's by mins): "))
     count = int(input("How many proxies you want? "))
 
     filename = "./done/oxy.txt"
@@ -17,7 +18,7 @@ def main():
         for i in range(count):
             rand_part = generate_random_digits()
             # result = f"{ip}:{port}:customer-{user}-cc-us-sessid-{rand_part}-sesstime-3:{password}"
-            result = f"pr.oxylabs.io:7777:customer-{user}-cc-us-sessid-{rand_part}-sesstime-5:{password}"
+            result = f"pr.oxylabs.io:7777:customer-{user}-cc-us-sessid-{rand_part}-sesstime-{session}:{password}"
             
             print(result)
             file.write(result + "\n")
